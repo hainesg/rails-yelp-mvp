@@ -1,0 +1,11 @@
+<h1>Restaurants Individual</h1>
+<ol class="list-group">
+<li class="list-inline list-group-item"><h2><%= @restaurant[:name] %> </h2></li>
+<li class="list-inline list-group-item"><h3><%= @restaurant[:category] %></h3></li>
+<li class="list-inline list-group-item"><h3><%= @restaurant[:phone_number] %></h3></li>
+<li class="list-inline list-group-item"><h3><%= @restaurant[:address] %></h3></li>
+<li class="list-inline list-group-item"><h3><%= @reviews.first[:content] %></h3></li>
+</ol>
+
+<%= link_to "Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+<%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-primary" %>

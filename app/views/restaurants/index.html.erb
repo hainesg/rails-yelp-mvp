@@ -1,0 +1,14 @@
+<h1>Restaurants</h1>
+
+<ol class="list-group">
+  <% @restaurants.each do |f| %>
+  <li class="list-inline list-group-item"><%= link_to f[:name], restaurant_path(f) %>
+    <%= link_to restaurant_path(f),
+      method: :delete,
+      data: { confirm: "Are you sure?" } do %>
+   <i class="fas fa-trash"></i></li>
+   <% end %>
+  <% end %>
+</ol>
+
+<%= link_to "New Resto", new_restaurant_path(@restaurant), class: "btn btn-primary" %>
